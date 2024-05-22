@@ -360,12 +360,12 @@ article .icon {
   bottom: 2.5rem;
 }
 
-
 /* PROJECTS SECTION */
 
 #projects {
   position: relative;
   text-align: center; /* Center the text elements */
+  margin-bottom: 5%;
 }
 
 .projects-details-container {
@@ -383,21 +383,36 @@ article .icon {
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  flex: 1 1 30%; /* Ensures three projects per row */
+  flex: 1 1 30%; /* Adjust this to fit three items per row */
   box-sizing: border-box;
-  min-width: 250px; /* Ensures it stays readable on smaller screens */
+  min-width: 250px;
+  max-width: 30%; /* Ensure three items per row */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /* Center the content horizontally */
 }
 
 .project-img {
   border-radius: 2rem;
-  width: 100%; /* Make sure the image fills the container */
+  width: 80%; /* Ensure the image is contained */
   height: auto; /* Maintain aspect ratio */
-  margin: 0 auto; /* Center the image within the container */
+  max-height: 150px; /* Limit the height to prevent overflow */
+  object-fit: contain; /* Ensure the image fits within the bounds */
 }
 
 .project-title {
   margin: 1rem 0;
   color: black;
+  text-align: center; /* Center the text */
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  align-items: flex-end; /* Ensure buttons align to the bottom */
 }
 
 .project-btn {
@@ -407,22 +422,12 @@ article .icon {
   text-decoration: none;
   display: inline-block;
   border-radius: 4px;
+  margin-bottom: 10px; /* Add margin to ensure spacing from the bottom */
 }
 
 .project-btn:hover {
-  background: rgb(240, 240, 240); /* Add hover effect */
+  background: rgb(240, 240, 240);
 }
-
-.btn-container {
-  display: flex;
-  justify-content: center;
-  gap: 1rem; /* Add space between buttons */
-}
-
-.icon.arrow {
-  cursor: pointer;
-}
-  
 
 /* CONTACT */
 
